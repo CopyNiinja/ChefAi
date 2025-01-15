@@ -13,6 +13,19 @@ export default function MainComponent() {
 
   const executeScroll = () => myRef.current.scrollIntoView();
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      addIngredient();
+    }
+  };
+
+  const addIngredient = () => {
+    if (input.trim() === "") return;
+    setIngredient([...ingredient, input]);
+    setRecipe("");
+    setInput("");
+  };
+
   const getRecipe = async () => {
     setLoading(true);
     let resp = await getRecipeFromMistral(ingredient);
@@ -30,16 +43,9 @@ export default function MainComponent() {
           onChange={(e) => {
             setInput(e.target.value);
           }}
+          onKeyPress={handleKeyPress}
         />
-        <button
-          className="button-ingredient"
-          onClick={() => {
-            if (input.trim() === "") return;
-            setIngredient([...ingredient, input]);
-            setRecipe("");
-            setInput("");
-          }}
-        >
+        <button className="button-ingredient" onClick={addIngredient}>
           +Add Ingredient
         </button>
       </div>
