@@ -69,3 +69,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - [Hugging Face](https://huggingface.co/) for the Inference API
 - [Bob Ziroll's React Course]
+
+## Live Demo
+
+Check out the live demo of the application [here](https://i-chef.netlify.app/).
