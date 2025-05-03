@@ -1,6 +1,6 @@
 # Chef AI
 
-Chef AI is a web application that helps you generate recipes based on the ingredients you have on hand. Simply input your ingredients, and Chef AI will suggest a recipe for you.
+Chef AI is a web application that helps you generate recipes based on the ingredients you have on hand. Simply input your ingredients, and Chef AI will suggest a recipe for you.And it will save the menu if you want for later uses.
 
 ## Features
 
